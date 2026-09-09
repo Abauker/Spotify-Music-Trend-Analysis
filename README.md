@@ -1,75 +1,284 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Spotify Music Trend Analysis
 
-## Template Instructions
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+## Project Overview
 
-This is the Code Institute student template for the three Data Analytics capstone projects. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+Spotify Music Trend Analysis is a data analytics project created as part of the Code Institute Data Analytics with AI Hackathon.
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+Our three-person team is analysing Spotify track data to explore patterns in music popularity and understand how different track characteristics are associated with popularity.
 
-If you are working on the first capstone project, you can also delete `.python-version`, `.slugignore`, `Procfile` and `setup.sh` as they are only required for later dashboard projects. 
+The project will combine Python-based data cleaning, exploratory data analysis and statistical testing with an interactive Tableau dashboard. The aim is to turn the dataset into clear and useful insights that can be understood by both technical and non-technical users.
 
-## How to use this repo
+### Project Objectives
 
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
+The project aims to:
 
-1. Copy the URL of your repository to your clipboard.
+- Clean and validate the Spotify dataset so it is ready for analysis.
+- Compare popularity across different genres.
+- Investigate how danceability, energy and duration are associated with popularity.
+- Compare the characteristics of the top 20 and bottom 20 tracks by popularity.
+- Compare popularity between explicit and non-explicit tracks.
+- Test a statistical hypothesis about energy and popularity.
+- Present the findings through an interactive Tableau dashboard.
+- Clearly document the project process, testing and findings.
 
-1. In VS Code, select **File** -> **Open Folder**.
 
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
+## Dataset Content
 
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open a new terminal.
 
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
+## Business Requirements
 
-1. In VS Code, select **File** > **Open Folder** again.
+The purpose of the project is to use Spotify track data to investigate music popularity patterns and explore whether different track characteristics are associated with popularity.
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
+The project will answer the following questions:
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate. You need to create your virtual environment, also called a venv, and then activate it whenever you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
+1. Which genres have the highest and lowest average popularity?
+2. How are danceability, energy and duration associated with popularity?
+3. What differences can we identify between the top 20 and bottom 20 tracks by popularity?
+4. Are explicit tracks more or less popular than non-explicit tracks?
 
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
+The final dashboard will present the results of these questions in a clear and interactive way.
 
-1. Choose **Venv** from the dropdown list.
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+## Hypothesis and How to Validate It
 
-1. **DO NOT** click the box next to `requirements.txt`; you need to complete additional steps before installing your dependencies. Click **OK**.
+The project will test whether there is a statistically significant relationship between track energy and popularity.
 
-1. You will see a `.venv` folder appear in the file explorer pane, indicating that the virtual environment has been created.
+### Null Hypothesis (H0)
 
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
+There is no significant relationship between track energy and popularity.
 
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
+### Alternative Hypothesis (H1)
 
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
+There is a significant relationship between track energy and popularity.
 
- ```console
- pip3 install -r requirements.txt
- ```
+### Validation Approach
 
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
+The relationship between energy and popularity will first be explored using descriptive statistics and visualisations.
 
-1. Click the **Kernel** button, then choose **Python Environments**.
+The distributions of the variables will then be reviewed before selecting an appropriate statistical test.
 
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
+The result will be interpreted using the strength and direction of the relationship together with statistical significance and the p-value.
 
-```console
-! python --version
-```
+Any relationship identified will be described as an association rather than evidence that energy causes a track to become popular.
 
-## Deployment Reminders
 
-* The `.python-version`, `.slugignore`, `Procfile` and `setup.sh` files are necessary only if you are deploying a Streamlit app to Heroku as part of your submission for units 2 and 3. 
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack, currently supported version that most closely matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
+## Project Plan
 
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
+The project is being completed over four days using milestones to organise the work.
+
+### Milestone 1 - Day 1: ETL and Initial Analysis
+
+- Define the project scope and research questions.
+- Set up the GitHub repository and project board.
+- Create and assign project issues and supporting tasks.
+- Extract and inspect the Spotify dataset.
+- Clean, transform and validate the data.
+- Begin initial analysis.
+
+### Milestone 2 - Day 2: Analysis and Dashboard Development
+
+- Analyse genre popularity.
+- Analyse danceability, energy and duration.
+- Compare the top 20 and bottom 20 tracks.
+- Compare explicit and non-explicit tracks.
+- Test the energy and popularity hypothesis.
+- Begin development of the Tableau dashboard.
+
+### Milestone 3 - Day 3: Testing and Documentation
+
+- Test and validate the ETL and analysis.
+- Test the Tableau dashboard.
+- Make final dashboard refinements.
+- Complete the README and project documentation.
+- Prepare the project findings for presentation.
+
+### Milestone 4 - Day 4: Final Presentation and Submission
+
+- Complete final fixes.
+- Review project deliverables.
+- Complete a presentation dry run.
+- Prepare for questions.
+- Submit and present the completed project.
+
+
+## Project Management and Team Roles
+
+The project is being completed by a team of three, with each member having a main area of responsibility while still contributing to the overall project.
+
+### Project Manager
+
+The Project Manager is responsible for:
+
+- Setting up and managing the GitHub Project board.
+- Creating project issues, tasks and milestones.
+- Assigning and monitoring work.
+- Tracking project progress.
+- Managing project scope.
+- Coordinating team check-ins.
+- Building the Tableau dashboard.
+- Supporting dashboard testing.
+- Coordinating project documentation.
+- Coordinating the final presentation.
+
+### Data Architect
+
+The Data Architect is responsible for:
+
+- Data extraction.
+- Data cleaning and transformation.
+- Data validation.
+- Data quality and consistency.
+- Preparing the cleaned dataset for analysis.
+- Testing the ETL process.
+
+### Data Analyst
+
+The Data Analyst is responsible for:
+
+- Exploratory data analysis.
+- Analysing the research questions.
+- Statistical analysis.
+- Hypothesis testing.
+- Producing analytical insights and visualisations.
+
+The team will use shared responsibility and support each other where required.
+
+
+## Project Tracking
+
+GitHub Projects is being used to manage and track the project.
+
+The project work has been divided into individual issues containing supporting task checklists.
+
+Each issue is assigned to a team member and linked to one of the four project milestones.
+
+The board uses the following workflow:
+
+**Todo, In Progress, Review, Done**
+
+The team will use regular check-ins to review progress, discuss blockers and update the board as work is completed.
+
+
+## Scope and Prioritisation
+
+The team has prioritised the project so that the core dashboard and analysis are completed before optional features are attempted.
+
+### Must Have
+
+The core project requirements are:
+
+- Clean and validated Spotify dataset.
+- Genre popularity analysis.
+- Audio feature and popularity analysis.
+- Top 20 versus bottom 20 comparison.
+- Explicit versus non-explicit comparison.
+- Statistical hypothesis test.
+- Interactive Tableau dashboard.
+- Dashboard testing.
+- ETL and analysis testing.
+- Complete README and project documentation.
+- Final project presentation.
+
+### Should Have
+
+- Additional useful Tableau filters and user controls.
+
+### Could Have
+
+- A simple popularity prediction model if all core project requirements are completed.
+- Analysis of additional Spotify audio features if time allows.
+
+### Won't Have
+
+- A Spotify recommendation system.
+
+The recommendation system was kept outside the project scope so that the team could focus on delivering the core ETL, analysis, Tableau dashboard, testing and documentation within the four-day timeframe.
+
+
+## The Rationale to Map the Business Requirements to the Data Visualisations
+
+
+## Analysis Techniques Used
+
+
+## Use of Generative AI
+
+
+## Ethical Considerations
+
+The project uses track-level Spotify data rather than personal information about individual Spotify users.
+
+Popularity will not be treated as a measure of musical quality or artistic value.
+
+There may also be differences in the number of tracks represented across genres or artists, which could influence comparisons.
+
+Relationships between audio features and popularity will be described as associations rather than proof of causation.
+
+The team will also clearly acknowledge limitations in the dataset and avoid making claims that cannot be supported by the analysis.
+
+The dataset source and any external resources used during the project will be credited appropriately.
+
+
+## Dashboard Design
+
+
+## Testing and Validation
+
+
+## Version Control and Collaboration
+
+GitHub is being used for version control and collaboration throughout the project.
+
+The team will use:
+
+- Separate development branches.
+- Regular commits.
+- Pull requests.
+- Team review before changes are merged.
+- GitHub Issues for project tasks.
+- GitHub Projects for project tracking.
+- Milestones to organise work across the four hackathon days.
+
+Team members will complete work on their own branches before submitting pull requests back to the main project repository.
+
+
+## Unfixed Bugs
+
+
+## Challenges and Problem Solving
+
+
+## Development Roadmap
+
+
+## Deployment
+
+
+## Main Data Analysis Libraries
+
+
+## Project Files
+
+
+## Credits
+
+### Data
+
+The project uses the Spotify Tracks Dataset provided through Kaggle:
+
+https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+
+### Project Guidance
+
+The project was developed as part of the Code Institute Data Analytics with AI Hackathon.
+
+The Code Institute hackathon brief and README template were used to guide the project structure and requirements.
+
+Any additional tutorials, code examples or external resources used during development will be credited here.
+
+
+## Acknowledgements
+
+We would like to thank Code Institute and our bootcamp facilitators for providing the hackathon brief, guidance and support throughout the project.
